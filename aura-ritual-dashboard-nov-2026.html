@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aura &amp; Ritual — Amazon India Sales Dashboard — November 2026</title>
+<style>
+  :root{
+    --cream:#F7F3EC; --card:#FFFFFF; --border:#E7DFD3;
+    --ink:#2E2B26; --muted:#8A8378; --faint:#B8B0A2;
+    --sage:#7C8C63; --sage-deep:#4E5B3E; --terra:#C07B53;
+    --up:#4E7C59;
+    --shadow:0 1px 2px rgba(46,43,38,.04),0 8px 24px rgba(46,43,38,.06);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{
+    background:var(--cream); color:var(--ink);
+    font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased; line-height:1.4;
+    padding:28px 18px 40px;
+  }
+  .wrap{max-width:1040px; margin:0 auto}
+  h1,h2,h3{font-family:Georgia,"Times New Roman",serif; font-weight:600; margin:0}
+
+  /* Header */
+  .top{display:flex; align-items:flex-end; justify-content:space-between; gap:16px; flex-wrap:wrap; margin-bottom:22px}
+  .brand h1{font-size:26px; letter-spacing:.2px}
+  .brand .sub{color:var(--muted); font-size:13.5px; margin-top:4px; letter-spacing:.3px; text-transform:uppercase}
+  .period{display:flex; align-items:center; gap:10px}
+  .pill{background:var(--sage-deep); color:#fff; font-size:13px; font-weight:600; padding:7px 14px; border-radius:999px; letter-spacing:.3px}
+  .demo{font-size:11px; color:var(--terra); border:1px solid var(--terra); border-radius:999px; padding:5px 10px; letter-spacing:.6px; text-transform:uppercase}
+
+  /* KPI row */
+  .kpis{display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-bottom:16px}
+  .kpi{background:var(--card); border:1px solid var(--border); border-radius:14px; padding:16px 16px 14px; box-shadow:var(--shadow)}
+  .kpi .lbl{font-size:12px; color:var(--muted); letter-spacing:.4px; text-transform:uppercase}
+  .kpi .val{font-family:Georgia,serif; font-size:30px; margin-top:8px; line-height:1}
+  .kpi .delta{display:inline-flex; align-items:center; gap:4px; font-size:12.5px; font-weight:600; color:var(--up); margin-top:9px}
+  .kpi .delta .mo{color:var(--faint); font-weight:500; margin-left:3px}
+
+  /* Middle grid */
+  .mid{display:grid; grid-template-columns:1.35fr 1fr; gap:14px; margin-bottom:16px}
+  .panel{background:var(--card); border:1px solid var(--border); border-radius:14px; padding:18px; box-shadow:var(--shadow)}
+  .panel h3{font-size:16px; margin-bottom:2px}
+  .panel .cap{font-size:12px; color:var(--muted); margin-bottom:12px}
+  svg{display:block; width:100%; height:auto}
+
+  /* Breakdown bars */
+  .split + .split{margin-top:18px}
+  .row{display:flex; align-items:center; gap:10px; margin:9px 0}
+  .row .name{font-size:13px; width:112px; color:var(--ink); flex:none}
+  .track{flex:1; height:10px; background:#EFE9DE; border-radius:999px; overflow:hidden}
+  .fill{height:100%; border-radius:999px}
+  .row .pct{font-size:12.5px; color:var(--muted); width:38px; text-align:right; flex:none; font-variant-numeric:tabular-nums}
+
+  /* Products table */
+  table{width:100%; border-collapse:collapse}
+  th,td{text-align:left; padding:11px 8px; font-size:13.5px}
+  th{font-size:11.5px; color:var(--muted); letter-spacing:.5px; text-transform:uppercase; border-bottom:1px solid var(--border); font-weight:600}
+  td{border-bottom:1px solid #F0EBE1}
+  tbody tr:last-child td{border-bottom:none}
+  td.num,th.num{text-align:right; font-variant-numeric:tabular-nums}
+  .sku{font-weight:600}
+  .bar-mini{display:inline-block; height:7px; border-radius:999px; background:var(--sage); vertical-align:middle}
+
+  /* Footer */
+  .foot{display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap; margin-top:18px; padding-top:16px; border-top:1px solid var(--border)}
+  .health{display:flex; gap:22px; flex-wrap:wrap}
+  .health span{font-size:13px; color:var(--muted)}
+  .health b{color:var(--ink); font-family:Georgia,serif}
+  .note{font-size:12px; color:var(--faint); max-width:420px; text-align:right}
+
+  @media (max-width:760px){
+    .kpis{grid-template-columns:repeat(2,1fr)}
+    .mid{grid-template-columns:1fr}
+    .note{text-align:left}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="top">
+    <div class="brand">
+      <h1>Aura &amp; Ritual</h1>
+      <div class="sub">Amazon India · Sales Dashboard</div>
+    </div>
+    <div class="period">
+      <span class="demo">Demo</span>
+      <span class="pill">November 2026</span>
+    </div>
+  </div>
+
+  <div class="kpis">
+    <div class="kpi">
+      <div class="lbl">Net Revenue</div>
+      <div class="val">₹4.82L</div>
+      <div class="delta">▲ 14.0% <span class="mo">vs Oct</span></div>
+    </div>
+    <div class="kpi">
+      <div class="lbl">Units Sold</div>
+      <div class="val">1,640</div>
+      <div class="delta">▲ 13.1% <span class="mo">vs Oct</span></div>
+    </div>
+    <div class="kpi">
+      <div class="lbl">Orders</div>
+      <div class="val">704</div>
+      <div class="delta">▲ 11.9% <span class="mo">vs Oct</span></div>
+    </div>
+    <div class="kpi">
+      <div class="lbl">Avg Order Value</div>
+      <div class="val">₹685</div>
+      <div class="delta">▲ 1.9% <span class="mo">vs Oct</span></div>
+    </div>
+  </div>
+
+  <div class="mid">
+    <div class="panel">
+      <h3>Revenue Trend</h3>
+      <div class="cap">Net revenue by month · ₹ lakh</div>
+      <svg viewBox="0 0 460 220" role="img" aria-label="Monthly revenue trend from June to November 2026">
+        <!-- baseline -->
+        <line x1="18" y1="175" x2="448" y2="175" stroke="#E7DFD3" stroke-width="1"/>
+        <!-- bars -->
+        <rect x="34"  y="86" width="40" height="89"  rx="5" fill="#9AA882"/>
+        <rect x="105" y="77" width="40" height="98"  rx="5" fill="#9AA882"/>
+        <rect x="177" y="65" width="40" height="110" rx="5" fill="#9AA882"/>
+        <rect x="249" y="51" width="40" height="124" rx="5" fill="#9AA882"/>
+        <rect x="320" y="35" width="40" height="140" rx="5" fill="#7C8C63"/>
+        <rect x="392" y="15" width="40" height="160" rx="5" fill="#C07B53"/>
+        <!-- value labels -->
+        <g font-family="Georgia,serif" font-size="13" fill="#4E5B3E" text-anchor="middle">
+          <text x="54"  y="80">2.7</text>
+          <text x="125" y="71">3.0</text>
+          <text x="197" y="59">3.3</text>
+          <text x="269" y="45">3.7</text>
+          <text x="340" y="29">4.2</text>
+          <text x="412" y="9" fill="#C07B53">4.8</text>
+        </g>
+        <!-- month labels -->
+        <g font-family="-apple-system,Segoe UI,sans-serif" font-size="12" fill="#8A8378" text-anchor="middle">
+          <text x="54"  y="193">Jun</text>
+          <text x="125" y="193">Jul</text>
+          <text x="197" y="193">Aug</text>
+          <text x="269" y="193">Sep</text>
+          <text x="340" y="193">Oct</text>
+          <text x="412" y="193">Nov</text>
+        </g>
+      </svg>
+    </div>
+
+    <div class="panel">
+      <div class="split">
+        <h3>By Category</h3>
+        <div class="cap">Share of net revenue</div>
+        <div class="row"><span class="name">Room sprays</span><span class="track"><span class="fill" style="width:64%;background:#7C8C63"></span></span><span class="pct">64%</span></div>
+        <div class="row"><span class="name">Linen sprays</span><span class="track"><span class="fill" style="width:36%;background:#C07B53"></span></span><span class="pct">36%</span></div>
+      </div>
+      <div class="split">
+        <h3>By Fulfilment</h3>
+        <div class="cap">Share of net revenue</div>
+        <div class="row"><span class="name">FBA (Amazon)</span><span class="track"><span class="fill" style="width:62%;background:#7C8C63"></span></span><span class="pct">62%</span></div>
+        <div class="row"><span class="name">Seller · Easy Ship</span><span class="track"><span class="fill" style="width:38%;background:#C07B53"></span></span><span class="pct">38%</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h3>Top Products</h3>
+    <div class="cap">Best sellers this month, by units</div>
+    <table>
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th class="num">Units</th>
+          <th class="num">Revenue</th>
+          <th class="num">Share</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="sku">Sandalwood &amp; Vetiver Room Spray</td><td class="num">392</td><td class="num">₹1,17,600</td><td class="num">24.4%</td></tr>
+        <tr><td class="sku">Jasmine Linen Spray</td><td class="num">356</td><td class="num">₹99,680</td><td class="num">20.7%</td></tr>
+        <tr><td class="sku">Rose &amp; Oud Room Spray</td><td class="num">268</td><td class="num">₹88,440</td><td class="num">18.3%</td></tr>
+        <tr><td class="sku">Lemongrass Room Spray</td><td class="num">241</td><td class="num">₹60,250</td><td class="num">12.5%</td></tr>
+        <tr><td class="sku">Tulsi-Mint Linen Spray</td><td class="num">203</td><td class="num">₹56,840</td><td class="num">11.8%</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="foot">
+    <div class="health">
+      <span>Avg rating <b>4.6★</b></span>
+      <span>Return rate <b>2.1%</b></span>
+      <span>Repeat buyers <b>29%</b></span>
+    </div>
+    <div class="note">Sample figures for a teaching demo. Replace with your Amazon Business sales report to populate real numbers.</div>
+  </div>
+
+</div>
+</body>
+</html>
